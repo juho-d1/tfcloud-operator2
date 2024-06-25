@@ -232,7 +232,8 @@ deploy-traefik:
 	helm repo update
 	helm upgrade --install traefik traefik/traefik \
 		--create-namespace --namespace $(TRAEFIK_NAMESPACE) \
-		--values hack/traefik-helm-values.yaml
+		--values hack/traefik-helm-values.yaml \
+		--version 21.1.0
 	kubectl apply -f hack/traefik-middleware.yaml
 
 .PHONY: undeploy-traefik
