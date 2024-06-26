@@ -96,7 +96,7 @@ When deploying the operator using the target `deploy`, an `etcd` cluster will be
 You can set the operator image as an environment variable with the command below (please remember to set the correct Docker registry).
 
 ```sh
-export IMG="docker.domain.com/tribefire-cloud/tribefire-operator:2.1.2"`
+export IMG="docker.domain.com/tribefire-cloud/tribefire-operator:2.1.2"
 ```
 
 The namespace that will be used to deploy the etcd cluster as well as the operator can be set via `OPERATOR_NAMESPACE`.
