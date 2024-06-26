@@ -93,10 +93,11 @@ When deploying the operator using the target `deploy`, an `etcd` cluster will be
 [bitnami helm chart](https://github.com/bitnami/charts/tree/main/bitnami/etcd/) is used. Our configuration is running in a stateful set with 3 replicas and has persistence and RBAC disabled. You can control all options via the corresponding
 [values.yaml](hack/etcd-helm-values.yaml) file.
 
-You can set the operator image as an environment variable with the command below (please remember to set the correct Docker registry).
+You can set the operator image and Docker registry as environment variables with the command below (please remember to set the correct Docker registry).
 
 ```sh
 export IMG="docker.domain.com/tribefire-cloud/tribefire-operator:2.1.2"
+export DOCKER_HOST="docker.domain.com"
 ```
 
 The namespace that will be used to deploy the etcd cluster as well as the operator can be set via `OPERATOR_NAMESPACE`.
