@@ -260,6 +260,12 @@ To undeploy the operator from the cluster:
 > make undeploy
 ```
 
+One can undeploy operator from a certain namespace with command below. **NOTICE** this will also remove the namespace, so save secretes/etc! Remeber also to remove any Tribefire deployments before undeploying the operator.
+
+```sh
+OPERATOR_NAMESPACE=adx make undeploy
+```
+
 ### How it works
 This project aims to follow the Kubernetes [Operator pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
