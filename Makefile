@@ -219,7 +219,7 @@ deploy-cert-manager:
 	helm upgrade --install cert-manager jetstack/cert-manager \
       --namespace $(CERTMANAGER_NAMESPACE) \
       --create-namespace \
-      --version v1.10.0 \
+      --version v1.12.12 \
       --set installCRDs=true
 
 .PHONY: deploy-cert-manager
